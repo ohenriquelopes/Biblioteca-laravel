@@ -16,3 +16,10 @@ use App\Http\Controllers;
 
 
 Route::get('/', [Controllers\IndexController::class, 'principal'])->name('site.index');
+Route::post('/', [Controllers\IndexController::class, 'salvar'])->name('site.index');
+
+
+
+Route::fallback(function(){
+    return 'A rota acessada não existe. <a href="'.route('site.index').'">Clique aqui</a> para ir para a página inicial';
+});
