@@ -14,17 +14,25 @@ return new class extends Migration
         Schema::create('livros_alugados', function (Blueprint $table) {
             $table->id();
             $table->foreignId('livro_id')->constrained('livros');
-            $table->foreignId('cliente_id')->constrained('clientes');
+            $table->foreignId('cliente_id')->constrained('cliente');
             $table->date('data_aluguel');
-            $table->date('data_devolucao');
-            $table->date('data_devolvido')->nullable();
-            $table->boolean('devolvido')->default(false);
+            $table->date('data_devolucao')->nullable();
+            $table->date('data_prevista_devolucao');
+            $table->boolean('status')->default(false);
             $table->boolean('atrasado')->default(false);
-            $table->integer('multa')->default(0);
-            $table->string('observacao', 100)->nullable();
-            $table->string('status', 100)->default('Alugado');
+            $table->integer('multa')->default(0)->nullable();
             $table->timestamps();
         });
+
+
+        Schema::table('livros_alugados', function (Blueprint $table) {
+            $table->index('livro_id');
+            $table->index('cliente_id');
+        });
+
+
+
+
     }
 
     /**

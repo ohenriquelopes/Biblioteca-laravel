@@ -18,6 +18,11 @@ return new class extends Migration
             $table->date('data_publicacao');
             $table->timestamps();
         });
+
+        Schema::table('livros', function (Blueprint $table) {
+            $table->index('livro_id');
+            $table->foreignId('livro_id')->constrained('livros');
+        });
     }
 
     /**
