@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('livros_alugados', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('livro_id')->constrained('livros');
-            $table->foreignId('cliente_id')->constrained('cliente');
             $table->date('data_aluguel');
             $table->date('data_devolucao')->nullable();
             $table->date('data_prevista_devolucao');
@@ -25,10 +23,10 @@ return new class extends Migration
         });
 
 
-        Schema::table('livros_alugados', function (Blueprint $table) {
-            $table->index('livro_id');
-            $table->index('cliente_id');
-        });
+//        Schema::table('livros_alugados', function (Blueprint $table) {
+//            $table->index('livro_id');
+//            $table->index('cliente_id');
+//        });
 
 
 

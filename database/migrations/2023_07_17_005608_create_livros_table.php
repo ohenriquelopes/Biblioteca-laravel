@@ -19,10 +19,10 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('livros', function (Blueprint $table) {
-            $table->index('livro_id');
-            $table->foreignId('livro_id')->constrained('livros');
-        });
+//        Schema::table('livros', function (Blueprint $table) {
+//            $table->index('livro_id');
+//            $table->foreignId('livro_id')->constrained('livros');
+//        });
     }
 
     /**
