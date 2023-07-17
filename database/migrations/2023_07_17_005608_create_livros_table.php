@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('livros', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo', 100);
+            $table->string('autor', 100);
+            $table->date('data_publicacao');
             $table->timestamps();
         });
     }
