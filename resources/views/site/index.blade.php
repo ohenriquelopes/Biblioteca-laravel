@@ -14,3 +14,4 @@
 
     @endcomponent
 </div>
+@endsection

@@ -6,9 +6,9 @@
     <br>
     <input name="autor" value="{{ old('autor') }}" type="text" placeholder="Autor" class="{{ $classe }}">
     <br>
-    <input name="livro" value="{{ old('livro') }}" type="text" placeholder="Livro" class="{{ $classe }}">
+    <input name="titulo" value="{{ old('titulo') }}" type="text" placeholder="Titulo" class="{{ $classe }}">
     <br>
-    <input name="data" value="{{ old('data') }}" type="text" placeholder="Data" class="{{ $classe }}">
+    <input name="data_publicacao" value="{{ old('data_publicacao') }}" type="text" placeholder="Data_publicacao" class="{{ $classe }}">
     <br>
     <button type="submit" class="{{ $classe }}">{{ $Button }}</button>
 </form>
