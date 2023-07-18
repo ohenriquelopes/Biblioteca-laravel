@@ -18,6 +18,8 @@ use App\Http\Controllers;
 Route::get('/', [Controllers\IndexController::class, 'principal'])->name('site.index');
 Route::post('/', [Controllers\IndexController::class, 'salvar'])->name('site.index');
 
+Route::get('/emprestar', [Controllers\EmprestarController::class, 'index'])->name('site.emprestar');
+Route::post('/emprestar', [Controllers\EmprestarController::class, 'emprestar'])->name('site.emprestar.processar');
 
 
 Route::fallback(function(){
