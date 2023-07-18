@@ -4,14 +4,14 @@
 
 @section('conteudo')
 
-<div>
-    <h1>Biblioteca</h1>
-</div>
-<div>
-    <h2>Emprestar Livro</h2>
-    <p>Formulario para emprestar um livro</p>
-    @component('site.layouts._components.form_basic', ['classe' => 'borda-preta', 'Button' => 'Emprestar'])
+    <div>
+        <h1>Biblioteca</h1>
+    </div>
+    <div>
+        <h2>Emprestar Livro</h2>
+        <p>Formulario para emprestar um livro</p>
+        @component('site.layouts._components.form_cliente', ['classe' => 'borda-preta', 'Button' => 'Emprestar'])
 
-    @endcomponent
-</div>
+        @endcomponent
+    </div>
 @endsection
