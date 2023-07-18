@@ -6,9 +6,9 @@
 
     <div class="menu">
         <ul>
-            <li><a href="{{ route('site.index') }}">Emprestar</a></li>
+            <li><a href="{{ route('site.livros_disponiveis') }}">Livros Disponiveis</a></li>
+            <li><a href="{{ route('site.emprestar') }}">Emprestar</a></li>
             <li><a href="{{ route('site.index') }}">Devolucoes</a></li>
-            <li><a href="{{ route('site.index') }}">Livros Disponiveis</a></li>
             <li><a href="{{ route('site.index') }}">Cadastrar Cliente</a></li>
         </ul>
     </div>
