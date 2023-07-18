@@ -1,14 +1,16 @@
 {{ $slot }}
 
+{{--Cadastro cliente--}}
+
 <form action{{ route('site.index') }} method="post">
     @csrf
     <input name="nome" value="{{ old('nome') }}" type="text" placeholder="Nome" class="{{ $classe }}">
     <br>
-    <input name="autor" value="{{ old('autor') }}" type="text" placeholder="Autor" class="{{ $classe }}">
+    <input name="telefone" value="{{ old('telefone') }}" type="text" placeholder="Telefone" class="{{ $classe }}">
     <br>
-    <input name="titulo" value="{{ old('titulo') }}" type="text" placeholder="Titulo" class="{{ $classe }}">
+    <input name="email" value="{{ old('email') }}" type="email" placeholder="Email" class="{{ $classe }}">
     <br>
-    <input name="data_publicacao" value="{{ old('data_publicacao') }}" type="text" placeholder="Data_publicacao" class="{{ $classe }}">
+    <input name="cpf" value="{{ old('cpf') }}" type="text" placeholder="CPF" class="{{ $classe }}">
     <br>
     <button type="submit" class="{{ $classe }}">{{ $Button }}</button>
 </form>
