@@ -22,6 +22,8 @@ Route::get('/emprestar', [Controllers\EmprestarController::class, 'index'])->nam
 Route::post('/emprestar', [Controllers\EmprestarController::class, 'emprestar'])->name('site.emprestar.processar');
 
 
+Route::get('/livros_disponiveis', [Controllers\LivrosDisponiveisController::class, 'index'])->name('site.livros_disponiveis');
+
 Route::fallback(function(){
     return 'A rota acessada não existe. <a href="'.route('site.index').'">Clique aqui</a> para ir para a página inicial';
 });
