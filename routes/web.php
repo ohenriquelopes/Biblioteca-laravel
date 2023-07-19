@@ -27,3 +27,7 @@ Route::get('/livros_disponiveis', [Controllers\LivrosDisponiveisController::clas
 Route::fallback(function(){
     return 'A rota acessada não existe. <a href="'.route('site.index').'">Clique aqui</a> para ir para a página inicial';
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
