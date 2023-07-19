@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Livro;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class LivroSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Livro::factory()->count(10)->create();
     }
 }
