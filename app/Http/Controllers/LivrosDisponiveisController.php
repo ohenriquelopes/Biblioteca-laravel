@@ -14,4 +14,11 @@ class LivrosDisponiveisController extends Controller
         return view('site.livros_disponiveis', compact('livros'));
     }
 
+    private function showLivros()
+    {
+        $livros = Livro::all(); // Recupera todos os registros da tabela "livros"
+        return view('nomedaoview', compact('livros'));
+    }
+
+
 }
