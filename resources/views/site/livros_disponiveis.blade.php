@@ -10,8 +10,14 @@
     <div>
         <h2>Livros Disponiveis</h2>
 {{--        <p>Formulario para emprestar um livro</p>--}}
-        @component('site.layouts._components.form_emprestar', ['classe' => 'borda-preta', 'Button' => 'Emprestar'])
-
-        @endcomponent
+        <ul>
+            @foreach($livros as $livro)
+                <li>
+                    <a href="{{ route('site.livros_disponiveis', $livro->id) }}">
+                        {{ $livro->titulo }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
     </div>
 @endsection
